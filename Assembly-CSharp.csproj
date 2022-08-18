@@ -54,7 +54,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AlertManager.cs" />
-    <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Dangerous\Enemy\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Dangerous\HurtPlayer.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />

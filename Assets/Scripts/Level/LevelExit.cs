@@ -26,7 +26,7 @@ public class LevelExit : MonoBehaviour
     public IEnumerator ExitLevel()
     {
         BlackScreen.transform.position = Vector2.MoveTowards(BlackScreen.transform.position, 
-            new Vector2(212, 120), ToBlack);
+            new Vector2(202f, 114.5f), ToBlack);
         yield return new WaitForSeconds(WaitUntilEnd);
         SceneManager.LoadScene("Level Selector");
     }

@@ -22,6 +22,6 @@ public class PlatformMovement : MonoBehaviour
                 i = 0;
             }
         }
-        transform.position = Vector3.MoveTowards(new Vector3(transform.position.x, transform.position.y, -13), Points[i].position, movementSpeed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, Points[i].position, movementSpeed * Time.deltaTime);
     }
 }
