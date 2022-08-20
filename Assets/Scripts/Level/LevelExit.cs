@@ -13,6 +13,7 @@ public class LevelExit : MonoBehaviour
     {  
         if (levelFinished)
         {
+            
             StartCoroutine(ExitLevel());
         }
     }
@@ -20,11 +21,13 @@ public class LevelExit : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().Play("LevelFinished");
             levelFinished = true;
         }
     }
     public IEnumerator ExitLevel()
     {
+        
         BlackScreen.transform.position = Vector2.MoveTowards(BlackScreen.transform.position, 
             new Vector2(202f, 114.5f), ToBlack);
         yield return new WaitForSeconds(WaitUntilEnd);

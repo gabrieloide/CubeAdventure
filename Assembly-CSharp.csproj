@@ -54,6 +54,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AlertManager.cs" />
+    <Compile Include="Assets\Scripts\AudioManager\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\AudioManager\Sound.cs" />
     <Compile Include="Assets\Scripts\Dangerous\Enemy\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Dangerous\HurtPlayer.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />

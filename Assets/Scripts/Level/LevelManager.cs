@@ -11,6 +11,10 @@ public class LevelManager : MonoBehaviour
             instance = this;
         }
     }
+    private void Start()
+    {
+            FindObjectOfType<AudioManager>().Play("MainTheme");
+    }
     void Update()
     {
         
@@ -38,5 +42,6 @@ public class LevelManager : MonoBehaviour
     public void LoadLevelSelector()
     {
         SceneManager.LoadScene("Level Selector");
+        
     }
 }

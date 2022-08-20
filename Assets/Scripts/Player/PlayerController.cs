@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
         if (JumpTimer > Time.time)
         {
             Jump();
+            FindObjectOfType<AudioManager>().Play("Jump");
         }
         if (Input.GetButtonUp("Jump") && rigidBody2D.velocity.y > 0)
         {
@@ -56,7 +57,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
-            HorizontalInput = Input.GetAxisRaw("Horizontal");
+        HorizontalInput = Input.GetAxisRaw("Horizontal");
         
         if (Input.GetButtonDown("Jump"))
         {

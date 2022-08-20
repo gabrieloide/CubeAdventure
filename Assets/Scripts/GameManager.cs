@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,17 +13,12 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
     }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            SceneManager.LoadScene("Level 1");
-        }
-    }
     public void PlayerDeath()
     {
        if (FindObjectOfType<PlayerController>().Health <= 0 || HUD.instance.timeLeft <= 0)
         {
+            FindObjectOfType<AudioManager>().Stop("MainTheme");
+            FindObjectOfType<AudioManager>().Play("GameOver");
             Player.SetActive(false);
             HUD.instance.HUDIcon.SetActive(false);   
         }
